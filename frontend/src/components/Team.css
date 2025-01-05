@@ -321,3 +321,19 @@
   top: 0;
   left: 35%;
 }
+@media (max-width: 1030px) and (min-width: 786px) {
+  .member-description h1 {
+    font-size: 40px;
+  }
+  .member-image img {
+    margin-left: 100px;
+  }
+  .feature{
+    padding: 10px;
+    margin:0px ;
+  }
+  .feature p{
+    font-size: 15px;
+  }
+  
+}

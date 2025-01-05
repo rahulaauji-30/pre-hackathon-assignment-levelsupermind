@@ -6,14 +6,15 @@
   align-items: center;
   height: 100vh;
   color: var(--texts-all);
-  /* animation: appear 2s ease-in-out; */
   scroll-snap-align: start;
 }
+
 .description {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
+
 #label {
   color: white;
   background-color: #00B5AD;
@@ -24,61 +25,68 @@
   width: fit-content;
   transition: box-shadow 0.3s ease, background-color 0.3s ease;
 }
+
 #label:hover {
   background-color: #00B5AD;
   box-shadow: 0 0 15px 5px #00B5AD; /* Add glow effect */
 }
+
 .intro h1 {
   font-family: "Salita";
   font-size: 64px;
   margin: 0;
 }
+
 .intro #sub-head-1 {
   color: var(--text-earth);
 }
+
 .intro #sub-head-2 {
   color: var(--base-purple);
 }
+
 .intro .btns {
   display: flex;
   flex-direction: row;
   text-align: center;
   gap: 20px;
 }
+
 .intro #intro-button {
   color: white;
   background-color: #007AFF;
   font-family: "Salita";
-  padding: 7px;
-  font-size: 22px;
-  border-radius: 3px;
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
+
 .intro #intro-button:hover {
   background-color: #026fe3;
 }
+
 .intro #intro-button-github {
-  /* background-color: var(--navbar-default); */
   font-family: "Salita";
-  padding: 8px;
-  font-size: 22px;
+  padding: 8px 16px;
+  font-size: 18px;
   border-radius: 5px;
   cursor: pointer;
   color: var(--texts-all);
   border: 1px solid var(--base-purple);
   transition: box-shadow 0.3s ease, background-color 0.3s ease;
 }
+
+.intro #intro-button-github:hover {
+  box-shadow: 0 0 15px 5px var(--base-purple); /* Add glow effect */
+}
+
 .intro p {
   font-family: "Saira";
   font-size: 22px;
   text-overflow: clip;
 }
-.intro #intro-button-github:hover {
-  /* background-color: var(--base-purple); */
-  box-shadow: 0 0 15px 5px var(--base-purple); /* Add glow effect */
-}
-
-/* images */
 
 .intro-images .circle-bg {
   position: relative;
@@ -93,26 +101,31 @@
   margin: 0 100px 0 200px;
   transition: box-shadow 0.3s ease, background-color 0.3s ease;
 }
+
 .intro-images .circle-bg:hover {
   box-shadow: 0 0 15px 5px var(--circle-bg); /* Add glow effect */
 }
+
 .circle-bg img {
   width: 200px;
   height: 200px;
   position: absolute;
 }
+
 .circle-bg img:nth-child(1) {
   top: 60px;
   right: 120px;
   border-radius: 10px;
   border: 1px solid #007AFF;
 }
+
 .circle-bg img:nth-child(2) {
   bottom: 100px;
   right: 50px;
   border: 1px solid #00B5AD;
   border-radius: 5px;
 }
+
 .circle-bg img:nth-child(3) {
   bottom: 150px;
   left: 30px;
@@ -120,82 +133,83 @@
   border: 1px solid red;
 }
 
-@media (prefers-color-scheme: light) {
-  .intro #sub-head-1 {
-    color: var(--text-earth);
+/* Responsive Adjustments */
+@media (max-width: 1040px) and (min-width: 786px) {
+  .intro {
+    text-align: left;
+    /* background-color: #007AFF; */
   }
-}
-@media (max-width: 768px) {
-  .intro h1 {
-    font-size: 64px;
-  }
-  .intro #intro-button {
-    padding: 10px;
-    font-size: 24px;
-  }
-  .intro #intro-button-github {
-    padding: 12px;
-    font-size: 24px;
-  }
-  .intro p {
-    font-size: 24px;
-  }
-  .intro-images .circle-bg {
-    margin-left: 50px;
-  }
-  .circle-bg img {
-    width: 200px;
-    height: 200px;
-  }
-}
 
-@media (max-width: 1024px) {
-    .intro{
-        flex-direction: column-reverse;
-        text-align: center;
-        /* margin-top: 70px; */
-    }
   .intro h1 {
-    font-size: 40px;
+    font-size: 48px;
+    text-align: left;
   }
+
   #label {
-    background-color: var(--base-gradient-2);
-    box-shadow: 0 0 15px 5px var(--base-gradient); /* Add glow effect */
+    padding: 5px 15px;
+    font-size: 14px;
+    text-align: left;
   }
+
   .intro .description {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
+    align-items: flex-start;
   }
-  .intro #subtext{
+
+  .intro #intro-button {
+    font-size: 16px;
+    padding: 8px 15px;
+  }
+
+  .intro #intro-button-github {
+    font-size: 16px;
+    padding: 8px 15px;
+  }
+
+  .intro p {
     font-size: 20px;
   }
-  .intro .btns {
-    font-size: 18px;
-  }
-  .intro #intro-button {
-    font-size: small;
-    padding: 2px;
-    display: block;
-    justify-content: center;
-    align-items: center;
-  }
-  .intro #intro-button-github {
-    font-size: medium;
-    padding: 2px;
-  }
-  .intro p {
-    font-size: 26px;
-  }
+
   .intro-images .circle-bg {
-    margin-left: 20px;
-    margin-right: 10px;
     width: 400px;
     height: 400px;
+    margin: 20px auto;
   }
+
   .circle-bg img {
     width: 150px;
     height: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro h1 {
+    font-size: 36px;
+  }
+  .intro{
+    /* background-color: red; */
+  }
+
+  .intro #intro-button {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+
+  .intro #intro-button-github {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+
+  .intro p {
+    font-size: 18px;
+  }
+
+  .intro-images .circle-bg {
+    width: 300px;
+    height: 300px;
+  }
+
+  .circle-bg img {
+    width: 120px;
+    height: 120px;
   }
 }

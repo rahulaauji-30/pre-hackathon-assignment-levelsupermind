@@ -61,7 +61,7 @@ const Team = () => {
   const prevMember = members[prevIndex];
 
   return (
-    <div className="team">
+    <div className="team" id="team">
       <div className="title">
       <h1>the DebugeDuo</h1>
       <img src={bug}/>

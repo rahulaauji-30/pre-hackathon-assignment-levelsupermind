@@ -5,7 +5,7 @@ import ToggleOffIcon from '@mui/icons-material/ToggleOff';
 import light from '../assests/images/light.svg';
 import darkWhite from '../assests/images/dark-white.svg';
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
-
+import {Link} from "react-router-dom"
 const Navbar = () => {
   const [darkMode, setDarkMode] = useState(true);
 
@@ -39,10 +39,10 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-texts">
-        <a id="brand-logo">Astrainsight</a>
+        <Link to="/"  style={{textDecoration:"none"}} id="brand-logo">Astrainsight</Link>
         <div className="navbar-links">
-          <a href="#">Chat</a>
-          <a href="#">Team</a>
+          <Link to="/chat">Chat</Link>
+          <Link to="#team">Team</Link>
         </div>
       </div>
       <div className="navbar-mode">
