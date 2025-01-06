@@ -11,7 +11,7 @@ const Chat = () => {
   const [messages, setMessages] = useState([]);
   const [userMessage, setUserMessage] = useState("");
   const chatEndRef = useRef(null); // Reference to scroll to the bottom
-
+  
   // Send message function
   const sendMessage = async (message) => {
     if (message.trim() !== "") {
@@ -26,7 +26,7 @@ const Chat = () => {
 
       // Send API request to get bot's response
       try {
-        const response = await fetch("http://127.0.0.1:5000/chat", {
+        const response = await fetch(`https://pre-hackathon-assignment-levelsupermind.onrender.com/chat`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -44,7 +44,7 @@ const Chat = () => {
           content: botReply, // Assuming botReply is in Markdown format
         };
         setMessages(updatedMessages);
-      } catch (error) {
+      }  catch (error) {
         console.error("Error fetching API response:", error);
         const updatedMessages = [...newMessages];
         updatedMessages[updatedMessages.length - 1] = {
@@ -53,6 +53,7 @@ const Chat = () => {
         };
         setMessages(updatedMessages);
       }
+      
     }
   };
 

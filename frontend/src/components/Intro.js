@@ -5,6 +5,7 @@ import graph2 from "../assests/images/graph2.png";
 import graph3 from "../assests/images/graph3.png";
 import graph from "../assests/images/graph.png";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import { Link } from "react-router-dom";
 const Intro = () => {
   return (
     <div className="intro">
@@ -19,7 +20,7 @@ const Intro = () => {
           smarter decisions and achieve your goals.
         </p>
         <div className="btns">
-        <a id="intro-button">Chat</a>
+        <Link to="/chat" id="intro-button">Chat</Link>
         <a id="intro-button-github" href="https://github.com/rahulaauji-30/pre-hackathon-assignment-levelsupermind.git" target="_blank"><GitHubIcon/> Repository</a>
         </div>
       </div>
