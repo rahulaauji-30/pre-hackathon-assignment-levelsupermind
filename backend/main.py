@@ -45,6 +45,9 @@ def run_flow(message, tweaks=None):
     except Exception as e:
         raise Exception(f"An error occurred: {e}")
 
+@app.route('/')
+def home():
+    return jsonify({"Message":"Welcome Chief its working"})
 
 @app.route('/chat', methods=['POST'])
 def chat():
