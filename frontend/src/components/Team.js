@@ -87,14 +87,14 @@ const Team = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <GitHubIcon style={{ fill: "white" }} />
+                <GitHubIcon style={{color:"var(--texts-all)"}} />
               </a>
               <a
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <LinkedInIcon style={{ fill: "white" }} />
+                <LinkedInIcon style={{color:"var(--texts-all)"}} />
               </a>
               <a onClick={toggleMoreOptions} className="more-options">
                 <MoreVertIcon />
@@ -114,7 +114,7 @@ const Team = () => {
             </div>
             <div className="btm-btns">
               <div className="left-btn" onClick={handlePrev}>
-                <KeyboardArrowLeftIcon />
+                <KeyboardArrowLeftIcon  />
               </div>
               <div className="right-btn" onClick={handleNext}>
                 <KeyboardArrowRightIcon />
